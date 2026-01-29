@@ -29,3 +29,67 @@ h1 {
 hr {
   margin: 40px 0;
 }
+
+/* Language dropdown container */
+.language-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  font-family: inherit;
+}
+
+/* Button */
+.lang-btn {
+  background: transparent;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+/* Grey rectangle on hover */
+.lang-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Dropdown menu */
+.lang-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #f2f2f2;
+  min-width: 140px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-top: 6px;
+  z-index: 1000;
+
+  /* Animation setup */
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+/* Dropdown links */
+.lang-menu a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* Grey hover inside dropdown */
+.lang-menu a:hover {
+  background-color: #d6d6d6;
+}
+
+/* Show menu on hover */
+.language-dropdown:hover .lang-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
